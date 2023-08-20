@@ -170,6 +170,7 @@ Array.prototype.customMap = function(callback) {
 };
 
 // Adding custom filter method to the Array prototype
+const numbers = [1, 2, 3, 4, 5];
 Array.prototype.customFilter = function(callback) {
   const result = [];
   console.log(this, "custom prototype")
@@ -185,7 +186,7 @@ Array.prototype.customFilter = function(callback) {
 const evenNumbers = numbers.customFilter((num) => num <2);
 console.log(evenNumbers)
 // Example usage
-// const numbers = [1, 2, 3, 4, 5];
+
 
 const squaredNumbers = numbers.customMap((num) => num * num);
 console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
