@@ -227,3 +227,10 @@ console.log(Two(plus(one())));
 console.log(One(plus(two())));
 console.log(Two(minus(one())));
 
+const abc= ['a', 'b', 'c', 'd', 'e']
+console.log(abc);
+console.log([...abc], 'hjhh');
+console.log(...abc, 'jjjj');
+let p = "jjj"
+let a =[...abc].map(e=> `${e} / ${p}`);
+console.log(abc, a)
