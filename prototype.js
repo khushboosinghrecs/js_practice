@@ -48,3 +48,21 @@ console.log(
   Object.prototype,    
   personPrototype       
 );
+
+onsole.log('start')
+
+const promise1 = new Promise((resolve, reject) => {
+  console.log(1)
+})
+
+const promise2 = new Promise((resolve, reject) => {
+      console.log("hhhh")
+    setTimeout(() =>{
+  console.log(2);
+    }, 0)
+})
+async function getData() {
+      return await Promise.resolve('I made it!');
+}
+const data = getData();
+console.log(data);
