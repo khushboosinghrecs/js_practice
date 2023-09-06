@@ -234,5 +234,36 @@ promRecur([likeTheVedio('abc1', true), shareVedio('abc2', true), shareVedio('abc
 // Promise Polyfill implementation
 
 function PromisePolyfill(executor){
-    
+    let onResolve , onReject , isFullfilled = false, isCalled = false, value;
+    value;
+    function resolve(value){
+        isFullfilled = true;
+        value = val;
+        if(typeof onResolve === function){
+            onResolve(val);
+            isCalled = true
+        }
+        onResolve(value); 
+    }
+    function reject(value){
+        onReject(value); 
+    }
+    this.then = function(callback){
+        onResolve = callback;
+        return this;
+    }
+    this.catch = function(callback){
+        onReject = callback;
+        return this;
+    }
 }
+
+const examplePromise = new PromisePolyfill(resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(2);
+    }, 1000)
+}
+
+examplePromise.then((res) =>{
+    console.log(res);
+}).catch((err) =>console.error(err));
