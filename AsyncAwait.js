@@ -23,6 +23,7 @@ const result =async  ()=>{
 const message1 = await shareVedio("Roadcolor", true);
 const message2 = await shareVedio("Roadcolor", true);
 const message3 = await likeTheVedio("Roadcolor", true);
+console.log('heelpp')
 console.log({message1 , message3, message2});
 
 }

@@ -64,18 +64,26 @@
       count.innerHTML = ++triggerCount;
     }, 800)
 
-    mythrottle =(cb , d) =>{
-      let last =0;
-
-      return function(...args){
-         let now = new Date().getTime();
-         if(now -last <d) return;
-         last = now;
-         return cb(...args);
-      }
-      last = now;
-      return cb(...args);
+    function mythrottle(func, delay) {
+      let lastCallTime = 0;
+      let timeout;
+    
+      return function (...args) {
+        const now = Date.now();
+    
+        if (now - lastCallTime >= delay) {
+          func(...args);
+          lastCallTime = now;
+        } else {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            func(...args);
+            lastCallTime = now;
+          }, delay - (now - lastCallTime));
+        }
+      };
     }
+    
 
     const customthrottleCount = mythrottle(()=>{
       count.innerHTML = ++triggerCount;

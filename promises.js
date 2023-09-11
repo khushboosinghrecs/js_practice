@@ -16,6 +16,10 @@ console.log("hi hi hi");
 console.log('stop');
 const sub1 = Promise.resolve("promise ")
 console.log(Promise.resolve("promise resolve").then((res) => console.log(res)).catch(err => console.log(err)));
+async function fn(){
+    const data = sub1();
+    console.log(data, 'data')
+}
 
 function likeTheVedio(vedio, a) {
     return new Promise((resolve, reject) => {
