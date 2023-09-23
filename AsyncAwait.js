@@ -1,4 +1,5 @@
 // Async Await => best approach to solve 
+// handle asynchronous operations that are typically managed using the .then() method with Promises
 console.log("start");
 function shareVedio(vedio, a) {
     return new Promise((resolve, reject) => {
