@@ -9,6 +9,7 @@ function shareVedio(vedio, a) {
         }, 1100)
     })
 }
+
 function likeTheVedio(vedio, a) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
