@@ -1,0 +1,164 @@
+What is JavaScript?
+
+JavaScript is a high-level, interpreted programming language used for web development.
+What are the different data types in JavaScript?
+
+Primitive types: Number, String, Boolean, Null, Undefined, Symbol.
+Reference types: Object, Array, Function.
+How do you declare a variable in JavaScript?
+
+Using var, let, or const followed by the variable name.
+What's the difference between let, const, and var?
+
+let and const have block scope, while var has function scope.
+const is for constants and cannot be reassigned.
+How do you check if a variable is an array in JavaScript?
+
+Using Array.isArray(variable).
+Explain what 'hoisting' in JavaScript means.
+
+Hoisting is the JavaScript mechanism where variable and function declarations are moved to the top of their containing scope during compilation.
+What is a closure in JavaScript?
+
+A closure is a function that retains access to variables from its containing function, even after that function has finished executing.
+What is the difference between null and undefined?
+
+null is an intentional absence of any object value.
+undefined represents an uninitialized variable or missing property.
+Explain the event delegation in JavaScript.
+
+Event delegation is a technique where you attach a single event listener to a common ancestor rather than individual elements. This is efficient for dynamically created elements.
+How do you create a class in JavaScript?
+
+Using the class keyword introduced in ES6.
+What is a promise in JavaScript?
+
+A promise is an object representing the eventual completion or failure of an asynchronous operation. It provides a cleaner way to handle asynchronous operations.
+Explain the concept of callback functions.
+
+Callback functions are functions passed as arguments to other functions, to be executed later when an operation is complete.
+What is the purpose of the this keyword in JavaScript?
+
+this refers to the context in which a function is executed. It can change based on how the function is called.
+What is the difference between == and === in JavaScript?
+
+== checks for equality with type coercion.
+=== checks for strict equality, including data type.
+What is the use of the map function in JavaScript?
+
+map is used to apply a function to each element of an array and create a new array with the results.
+Explain the difference between localStorage and sessionStorage.
+
+localStorage stores data with no expiration date.
+sessionStorage stores data only for the duration of a page session.
+How can you create an object in JavaScript?
+
+Using object literals, constructors, or the class syntax.
+What is the purpose of the bind method?
+
+The bind method is used to create a new function with a fixed this value and optionally some pre-defined arguments.
+Explain the purpose of the reduce function in JavaScript.
+
+reduce is used to accumulate a single value by iterating through an array.
+What is a callback hell, and how can it be avoided?
+Callback hell refers to the situation where multiple nested callbacks make code hard to read and maintain.
+It can be avoided using techniques like Promises, async/await, or libraries like async.js.
+What are arrow functions in JavaScript?
+
+Arrow functions are a shorter way to write function expressions, with a lexically scoped this.
+How can you remove an item from an array in JavaScript?
+
+Using splice, pop, or shift, or using array methods like filter.
+Explain the event loop in JavaScript.
+
+The event loop is a mechanism for handling asynchronous operations. It allows JavaScript to execute non-blocking code.
+What is the purpose of the try...catch statement in JavaScript?
+
+try...catch is used to handle errors in code. Code inside try is executed, and if an error occurs, it's caught and handled in the catch block.
+How can you reverse a string in JavaScript?
+
+Using split, reverse, and join methods or by iterating through the string.
+Explain the concept of prototypal inheritance in JavaScript.
+
+JavaScript uses a prototype chain to inherit properties and methods from other objects.
+What is the purpose of the typeof operator?
+
+typeof is used to determine the data type of a variable.
+How can you merge two objects in JavaScript?
+
+Using the Object.assign() method or the spread operator ({ ...obj1, ...obj2 }).
+Explain the concept of event bubbling in the context of JavaScript.
+
+Event bubbling is a mechanism where an event triggered on a child element propagates up to its ancestors.
+How do you check if a string contains a specific substring in JavaScript?
+
+Using the includes() method or indexOf().
+What is the purpose of the fetch API in JavaScript?
+
+The fetch API is used for making network requests and is commonly used to fetch data from a server.
+How can you create a copy of an object in JavaScript?
+
+Using the Object.assign() method, the spread operator ({ ...original }), or a library like Lodash.
+What is the purpose of the localStorage object in web development?
+
+localStorage is used to store key-value pairs in the client's browser with no expiration date.
+How do you handle asynchronous operations in JavaScript?
+
+Using callbacks, promises, async/await, or event listeners.
+Explain the difference between null and undefined.
+
+null represents an intentional absence of any object value.
+undefined represents an uninitialized variable or missing property.
+How do you convert a string to an integer in JavaScript?
+
+Using parseInt() or the unary + operator.
+What is a callback function in JavaScript?
+
+A callback function is a function passed as an argument to another function to be executed later.
+How can you convert a JavaScript object to JSON and vice versa?
+
+Use JSON.stringify() to convert an object to JSON and JSON.parse() to convert JSON to an object.
+Explain event delegation in JavaScript.
+
+Event delegation is a technique where you attach a single event listener to a common ancestor to handle events for multiple elements.
+What is a closure in JavaScript, and how do you create one?
+
+A closure is a function that retains access to its outer (enclosing) function's variables even after the outer function has finished executing.
+You can create a closure by defining a function inside another function.
+What is the difference between null and undefined in JavaScript?
+
+null is an explicitly assigned value representing the absence of any object value.
+undefined means a variable has been declared but has not been assigned a value.
+How do you create a JavaScript class?
+
+Using the class keyword introduced in ECMAScript 2015 (ES6).
+What is the purpose of the this keyword in JavaScript?
+
+this refers to the current object, and its value can change depending on the context in which it's used.
+Explain the difference between == and === in JavaScript.
+
+== checks for equality with type coercion.
+=== checks for strict equality without type coercion.
+What is the purpose of the map function in JavaScript?
+
+map is used to create a new array by applying a function to each element of an existing array.
+Explain the purpose of the reduce function in JavaScript.
+
+reduce is used to accumulate a single value by iteratively applying a function to elements of an array.
+What is a promise in JavaScript?
+
+A promise is an object representing the eventual completion or failure of an asynchronous operation.
+How do you create an object in JavaScript?
+
+Objects can be created using object literals, constructors, or classes.
+What is event delegation in JavaScript, and why is it useful?
+
+Event delegation is a technique where a single event listener is attached to a common ancestor of multiple elements, allowing you to handle events more efficiently, especially for dynamically generated elements.
+How can you remove duplicates from an array in JavaScript?
+
+You can remove duplicates using techniques like Set, filter, or iterating over the array and creating a new array with unique values.
+These questions cover a wide range of JavaScript topics that you might encounter in interviews. Practice these, and you'll be better prepared for JavaScript-related interviews.
+
+
+
+
