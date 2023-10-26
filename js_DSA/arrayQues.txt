@@ -1,0 +1,103 @@
+Certainly, here are 50 common array-related algorithms and tasks that you might encounter in JavaScript:
+
+1. **Find the maximum element in an array.**
+
+2. **Find the minimum element in an array.**
+
+3. **Calculate the sum of all elements in an array.**
+
+4. **Calculate the average of all elements in an array.**
+
+5. **Find the index of a specific element in an array.**
+
+6. **Check if an array is empty.**
+
+7. **Check if an array is sorted in ascending order.**
+
+8. **Reverse an array.**
+
+9. **Count the number of occurrences of a specific element in an array.**
+
+10. **Remove duplicate elements from an array.**
+
+11. **Find the intersection of two arrays.**
+
+12. **Find the union of two arrays.**
+
+13. **Check if two arrays are equal.**
+
+14. **Sort an array in ascending order.**
+
+15. **Sort an array in descending order.**
+
+16. **Shuffle the elements of an array randomly.**
+
+17. **Rotate an array to the right by a specific number of positions.**
+
+18. **Find the second largest element in an array.**
+
+19. **Find the nth smallest element in an array.**
+
+20. **Find the mode (most frequent element) in an array.**
+
+21. **Find the median of an array.**
+
+22. **Remove a specific element from an array.**
+
+23. **Remove elements with a specific value from an array.**
+
+24. **Find the longest consecutive subsequence in an array.**
+
+25. **Find the common elements in multiple arrays.**
+
+26. **Split an array into chunks of a specific size.**
+
+27. **Find the kth largest element in an unsorted array.**
+
+28. **Find the index of the first occurrence of a subarray in an array.**
+
+29. **Find the index of the last occurrence of a subarray in an array.**
+
+30. **Flatten a nested array.**
+
+31. **Find the missing number in an array of 1 to n.**
+
+32. **Find the elements that appear more than n/2 times in an array (majority element).**
+
+33. **Implement binary search on a sorted array.**
+
+34. **Remove the duplicates from a sorted array in-place.**
+
+35. **Find the longest increasing subarray.**
+
+36. **Find the largest subarray with equal 0s and 1s.**
+
+37. **Check if an array is a palindrome.**
+
+38. **Find the smallest positive missing number in an unsorted array.**
+
+39. **Rearrange positive and negative values in an array.**
+
+40. **Implement a stack using an array.**
+
+41. **Implement a queue using an array.**
+
+42. **Implement a circular queue using an array.**
+
+43. **Find the "next greater element" for each element in an array.**
+
+44. **Find the "next smaller element" for each element in an array.**
+
+45. **Find the maximum subarray sum (Kadane's algorithm).**
+
+46. **Find the longest subarray with a sum equal to a specific target.**
+
+47. **Remove an element from an array by swapping with the last element (O(1) deletion).**
+
+48. **Find the minimum window in an array containing all elements of another array.**
+
+49. **Implement a priority queue using an array.**
+
+50. **Implement a deque (double-ended queue) using an array.**
+
+These algorithms and tasks cover a wide range of array-related challenges and can be used to test your array manipulation and problem-solving skills in JavaScript.

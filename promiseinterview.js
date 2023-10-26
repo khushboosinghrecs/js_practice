@@ -1,20 +1,20 @@
 // 1
 
 console.log('start');
-// const promise1 = new Promise((resolve, reject)=>{
-//     console.log(1);
-//     resolve(2);
+const promise1 = new Promise((resolve, reject)=>{
+    console.log(1);
+    resolve(2);
  
-// })
+})
 
-// // promise1.then((res)=>{
-// //     console.log(res);
-// // })
-// const promise2 = new Promise((resolve, reject)=>{
-//     console.log(3);
-//     resolve(4);
-//     console.log(5);
+// promise1.then((res)=>{
+//     console.log(res);
 // })
+const promise2 = new Promise((resolve, reject)=>{
+    console.log(3);
+    resolve(4);
+    console.log(5);
+})
 
 // promise2.then((res)=>{
 //     console.log(res);
