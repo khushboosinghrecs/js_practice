@@ -93,23 +93,7 @@ console.log(JSON.parse(localStorage.getItem('test')))
 console.log(strObj);
 console.log(JSON.parse(strObj));
 
-// spread operator
 
-console.log(..."khushi");
-//  k h u s h i
-
-console.log({..."khushi"});
-// {0: 'k', 1: 'h', 2: 'u', 3: 's', 4: 'h', 5: 'i'}
-
-console.log([..."khushi"]);
-//  (6) ['k', 'h', 'u', 's', 'h', 'i']
-
-const user = {name: "Lydia", age : 21, fullName: "K Singh", addr:{
-    state: 'up',
-    district: 'vns'
-}};
-const admin = {admin: true, ...user};
-console.log(admin);
 
 const shape = {
     radius : 10,
