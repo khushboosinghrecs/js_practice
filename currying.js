@@ -84,3 +84,22 @@ const sum = (a, b, c, d) => a+b+c+d;
 
 const totalSum = curry(sum);
 console.log(totalSum(1)(6)(5)(6));
+
+
+// curry.js
+function curry(x) {
+    let sum = x || 0;
+  
+    function inner(y) {
+      if (y === undefined) {
+        return sum;
+      }
+      sum += y;
+      return inner;
+    }
+  
+    // __define-ocg__ Return sum directly when no arguments are provided
+    return x === undefined ? sum : inner;
+  }
+  
+  
