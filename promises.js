@@ -13,13 +13,12 @@ console.log("hi hi hi");
 // }).catch(err => {
 //     console.log(err)
 // })
-console.log('stop');
-const sub1 = Promise.resolve("promise ")
-console.log(Promise.resolve("promise resolve").then((res) => console.log(res)).catch(err => console.log(err)));
-async function fn(){
-    const data = sub1();
-    console.log(data, 'data')
-}
+// const sub1 = Promise.resolve("promise ")
+// console.log(Promise.resolve("promise resolve").then((res) => console.log(res)).catch(err => console.log(err)));
+// async function fn(){
+//     const data = sub1();
+//     console.log(data, 'data')
+// }
 
 function likeTheVedio(vedio, a) {
     return new Promise((resolve, reject) => {
@@ -64,23 +63,23 @@ function shareVedio(vedio, a) {
 // 1-> Promise.all => multiple promises to promise.all it's going run multiple promise in parallel and in end it return array of fullfilled promisese 
 // what happened any one will faile? if any one of the result failed all will failed
 
-console.log(Promise.all([ likeTheVedio("happy coder", true),
-    likeTheVedio("happy coder", true),
-    shareVedio('happy codeing', true)
-   ]
-).then(res=> console.log(Date.now(), res)).catch(err => console.log('err is failed', err)))
+// console.log(Promise.all([ likeTheVedio("happy coder", true),
+//     likeTheVedio("happy coder", false),
+//     shareVedio('happy codeing', true)
+//    ]
+// ).then(res=> console.log(Date.now(), res)).catch(err => console.log('err is failed', err)))
 
 // promise.race => gives first promise that fullfilled or rejected first
-console.log(Promise.race([ likeTheVedio("happy coder", true),
-    likeTheVedio("happy coder", true),
-    shareVedio('happy codeing', true)
-   ]
-).then(res=>console.log(Date.now(), res)).catch(err => console.log('err is failed', err)))
+// console.log(Promise.race([ likeTheVedio("happy coder", true),
+//     likeTheVedio("happy coder", true),
+//     shareVedio('happy codeing', false)
+//    ]
+// ).then(res=>console.log(Date.now(), res)).catch(err => console.log('err is failed', err)))
 
 // Promise.allSettled() => if any of the promise fullfilled and rejected promise array of object with fullfilled and rejected 
 
-console.log(Promise.allSettled([ likeTheVedio("happy coder", true),
-    likeTheVedio("happy coder", true),
+console.log(Promise.allSettled([ likeTheVedio("happy coder", false),
+    likeTheVedio("happy coder", false),
     shareVedio('happy codeing', false)
    ]
 ).then(res=>console.log(Date.now(), res)).catch(err => console.log('err is failed', err)))
@@ -88,7 +87,7 @@ console.log(Promise.allSettled([ likeTheVedio("happy coder", true),
 //Promise.any() => return first fullfilled promise and ignores rejected one if all promises will fail retuurn error
 console.log(Promise.any([ likeTheVedio("happy coder", false),
     likeTheVedio("happy coder", false),
-    shareVedio('happy codeing', true)
+    shareVedio('happy codeing', false)
    ]
 ).then(res=>console.log(Date.now(), res)).catch(err => console.log('err is failed', err)))
 
