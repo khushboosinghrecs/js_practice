@@ -1,0 +1,18 @@
+The HTTP status code that signifies a successful request resulting in the creation of a new resource is **201 Created**. When a client sends a request to the server, and the server successfully processes the request, creates the requested resource, and the resource is successfully created, the server responds with the 201 status code.
+
+Here is an example of an HTTP response with the status code 201 Created:
+
+```http
+HTTP/1.1 201 Created
+Location: /newly-created-resource
+Content-Type: text/plain
+
+The resource has been successfully created.
+```
+
+Key points:
+
+- The `Location` header typically provides the URI of the newly created resource.
+- The server might include additional information in the response body, depending on the specifics of the request.
+
+This status code indicates that the request was not only successful but also resulted in the creation of a new resource on the server. It is commonly used in scenarios such as creating a new item in a database, adding a new user, or any other operation that leads to the creation of a resource.

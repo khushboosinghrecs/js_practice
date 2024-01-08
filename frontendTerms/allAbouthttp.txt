@@ -1,0 +1,73 @@
+HTTP error codes (or status codes) are three-digit numbers that are returned by web servers to indicate the outcome of an HTTP request. 
+
+Here are some of the most important HTTP error codes along with their detailed explanations:
+
+# 1xx: Informational
+
+### 100 Continue: 
+- This means that the server has received the request headers, and the client should proceed to send the request body.
+
+### 101 Switching Protocols: 
+- The requester has asked the server to switch protocols and the server is acknowledging that it will switch.
+
+# 2xx: Successful
+
+### 200 OK: 
+- The request was successful. The information returned with the response is dependent on the method used in the request.
+
+### 201 Created: 
+- The request was successful, and a resource was created.
+
+### 204 No Content: 
+- The server has fulfilled the request but does not need to return an entity-body, and might want to return updated metadata.
+
+# 3xx: Redirection
+
+### 300 Multiple Choices: 
+- There are multiple options that the client may follow.
+
+### 301 Moved Permanently: 
+- The URL of the requested resource has changed permanently.
+
+### 302 Found: 
+- The URL of the requested resource has changed temporarily. New changes in the URI might be made in the future.
+
+### 304 Not Modified: 
+- There was no new data to return.
+
+# 4xx: Client Errors
+
+### 400 Bad Request: 
+- The request cannot be processed because of bad request syntax, excessive size, or another client error.
+
+### 401 Unauthorized: 
+- The client must authenticate itself to get the requested response.
+
+### 403 Forbidden: 
+- The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.
+
+### 404 Not Found: 
+- The server cannot find the requested resource.
+
+### 405 Method Not Allowed: 
+- The request method is known by the server but is not supported by the target resource.
+
+### 429 Too Many Requests: 
+- The client has sent too many requests in a given amount of time ("rate limiting").
+
+# 5xx: Server Errors
+
+### 500 Internal Server Error: 
+- The server failed to fulfill a valid request.
+
+### 501 Not Implemented: 
+- The server either does not recognize the request method, or it lacks the ability to fulfill the request.
+
+### 502 Bad Gateway: 
+- The server, while acting as a gateway or proxy, received an invalid response from the upstream server.
+
+### 503 Service Unavailable: 
+- The server cannot handle the request (due to a temporary overloading or maintenance). It implies that the server will be available later.
+
+### 504 Gateway Timeout: 
+- The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server or some other auxiliary server.

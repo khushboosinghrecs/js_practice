@@ -1,0 +1,74 @@
+**CSS Variables:**
+CSS Variables, also known as Custom Properties, are entities defined by CSS authors that contain specific values to be reused throughout a document. They are similar to variables in programming languages and can simplify the management of styles by providing a way to store and reuse values.
+
+### Adding CSS Variables in CSS File:
+
+1. **Declaration:**
+   - CSS variables are declared using the `--` prefix.
+   - Example:
+     ```css
+     :root {
+       --main-color: #3498db;
+       --font-size: 16px;
+     }
+     ```
+
+2. **Usage:**
+   - Variables can then be used in other parts of the CSS file:
+     ```css
+     body {
+       color: var(--main-color);
+       font-size: var(--font-size);
+     }
+     ```
+
+### Adding CSS Variables Using JavaScript:
+
+1. **Accessing Styles:**
+   - JavaScript can access and modify CSS variables using the `style` property of an element.
+   - Example:
+     ```javascript
+     document.documentElement.style.setProperty('--main-color', '#ff5733');
+     ```
+
+### Updating CSS Variables:
+
+1. **JavaScript Update:**
+   - To dynamically update a CSS variable value, you can use JavaScript to modify the variable.
+   - Example:
+     ```javascript
+     document.documentElement.style.setProperty('--main-color', '#00bcd4');
+     ```
+
+### Using CSS Variables:
+
+1. **In Styles:**
+   - CSS variables can be used in various CSS properties.
+   - Example:
+     ```css
+     .box {
+       background-color: var(--main-color);
+       font-size: var(--font-size);
+     }
+     ```
+
+2. **Media Queries:**
+   - CSS variables can be utilized in media queries for responsive design.
+   - Example:
+     ```css
+     @media (min-width: var(--tablet-breakpoint)) {
+       /* styles for tablets */
+     }
+     ```
+
+3. **Transitions:**
+   - CSS variables can be employed in transitions.
+   - Example:
+     ```css
+     .element {
+       transition: background-color var(--transition-duration) ease-in-out;
+     }
+     ```
+
+**Summary:**
+CSS variables provide a convenient way to store and reuse values in your stylesheets. They enhance code maintainability, make it easier to update styles globally, and are well-supported by modern browsers. By combining CSS variables with JavaScript, you can create dynamic and responsive designs with ease. Keep in mind that Internet Explorer does not support CSS variables, so be sure to check the compatibility if supporting older browsers is a requirement.
