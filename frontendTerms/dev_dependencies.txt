@@ -1,0 +1,22 @@
+It looks like you're referring to common commands used in a Next.js project. Here's a brief explanation of each:
+
+1. **`dev`:**
+   - **Usage:** `npm run dev` or `yarn dev`
+   - **Description:** This command starts the Next.js development server. It enables hot module replacement (HMR), allowing you to see instant updates as you modify your code during development. It's the recommended way to work on your Next.js project locally.
+
+2. **`build`:**
+   - **Usage:** `npm run build` or `yarn build`
+   - **Description:** This command is used to build your Next.js application for production. It generates the optimized and minified production-ready code. This step is typically done before deploying your application.
+
+3. **`start`:**
+   - **Usage:** `npm start` or `yarn start`
+   - **Description:** After running the `build` command, this command starts a Next.js server to serve the production-ready application. It is used to run your application in a production environment.
+
+4. **`lint`:**
+   - **Usage:** The `lint` command is often not specific to Next.js itself, but rather a linting command used for code quality checks. For example:
+     - `npm run lint` or `yarn lint`
+   - **Description:** Linting is a process of running a program that analyzes code for potential errors. It helps enforce consistent coding styles and identifies issues early in the development process. You might need to configure a linting tool, such as ESLint, for your project.
+
+If you have specific questions or if you'd like more detailed information about any of these commands, feel free to ask!
+
+public folder for additional resources
