@@ -26,7 +26,7 @@
       return function(...args){
          if(timer) clearTimeout(timer);
          timer = setTimeout(()=>{
-            cb(...args)
+            cb(...args) 
          }, d)
       }
     }
