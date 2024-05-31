@@ -10,8 +10,8 @@ class Graph{
         }
     }
     addEdge(v1, v2){
-        this.adjacncyMat[v1][v2]=0;
-        this.adjacncyMat[v2][v1]=0;
+        this.adjacncyMat[v1][v2]=1;
+        this.adjacncyMat[v2][v1]=1;
     }
 
     removeEdge(v1, v2){

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <section class="px-40 py-24 bg-gradient-to-r from-[#FFFFFF] from-10% via-[#e6f4ffdb] via-40% to-[#ECF7FF] to-80% ">
+        <div class="max-w-[600px]">
+          <p class="bg-gradient-to-r from-[#97abf4] text-[#00386B] w-12 h-12 text-2xl py-2 px-8 font-semibold">
+            Ecosystem
+          </p>
+          <p class="text-5xl leading-tight mt-5">
+            How does a smart street light ecosystem work?
+          </p>
+        </div>
+        <div class="mt-20">
+          <div class="relative flex">
+            <div class="flex flex-col justify-center items-center basis-72 z-50">
+              <div class="flex gap-16">
+                <div class="border border-[#3661FF] p-4 w-20 rounded-3xl outline-dashed outline-2 outline-offset-8 outline-[#3661FF]">
+                  <Image
+                    src="/street-light-controller.png"
+                    width={44}
+                    height={44}
+                    alt="street light1"
+                  />
+                </div>
+                <div class="relative border border-[#3661FF] p-4 w-20 rounded-3xl outline-dashed outline-2 outline-offset-8 outline-[#3661FF]">
+                  <Image
+                    src="/street-light-controller.png"
+                    width={44}
+                    height={44}
+                    alt="street light2"
+                  />
+  
+                </div>
+              </div>
+              <div class="text-center mt-6">
+                <p class="font-semibold">Street Light Controller</p>
+                <p class="text-[#626262]">
+                  Activates/deactivates in response to motion/light sensing and
+                  controls the brightness of the street lamp
+                </p>
+              </div>
+            </div>
+  
+            <div class="flex flex-col grow relative">
+              <div class="border-t-[3px] border-dashed w-full absolute top-1/4"></div>
+            </div>
+  
+            <div class="flex flex-col justify-center items-center basis-64 z-50">
+              <div class="border border-[#CDCDCD] p-4 w-32 rounded-3xl outline-dashed outline-2 outline-offset-8 outline-[#CDCDCD]">
+                <Image
+                  src="/gateway.png"
+                  width={90}
+                  height={90}
+                  alt="street light3"
+                />
+              </div>
+              <div class="text-center mt-6">
+                <p class="font-semibold">Gateway</p>
+                <p class="text-[#626262]">
+                  Employed for interfacing between a Controller and the Lighting
+                  Management Software.
+                </p>
+              </div>
+            </div>
+  
+            <div class="flex flex-col grow relative">
+              <div class="border-t-[3px] border-dashed w-full absolute top-1/4"></div>
+            </div>
+  
+            <div class="flex flex-col justify-center items-center basis-52 z-50">
+              <div class="border border-[#CDCDCD] p-4 w-28 rounded-3xl outline-dashed outline-2 outline-offset-8 outline-[#CDCDCD]">
+                <Image
+                  src="/cloud-based-management.png"
+                  width={80}
+                  height={80}
+                  alt="street light4"
+                />
+              </div>
+              <div class="text-center mt-6">
+                <p class="font-semibold">Cloud-based Management System</p>
+                <p class="text-[#626262]">
+                  Collects information from multiple gateways.
+                </p>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="flex flex-col">
+            <div class="relative h-20">
+              <div class="border-r-[3px] border-dashed absolute left-[54%] h-20"></div>
+            </div>
+  
+            <div class="relative h-2">
+              <div class="border-t-[3px] border-dashed absolute left-[40%] w-80"></div>
+            </div>
+  
+            <div class="relative h-20">
+              <div class="border-r-[3px] border-dashed absolute left-[40%] h-4"></div>
+              <div class="border-r-[3px] border-dashed absolute right-[33%] h-4"></div>
+            </div>
+  
+            <div>
+              <div class="flex flex-col justify-center items-center basis-44">
+                <div class="border border-[#CDCDCD] p-4 w-28 rounded-3xl outline-dashed outline-2 outline-offset-8 outline-[#CDCDCD]">
+                  <Image
+                    src="/users.png"
+                    width={80}
+                    height={80}
+                    alt="street light"
+                  />
+                </div>
+                <div class="text-center mt-6">
+                  <p class="font-semibold">Users</p>
+                  <p class="text-[#626262]">
+                    Data from the cloud is used to monitor and control street
+                    lights by the System Managers.
+                  </p>
+                </div>
+              </div>
+  
+              <div class="flex flex-col justify-center items-center basis-44">
+                <div class="border border-[#CDCDCD] p-4 w-28 rounded-3xl outline-dashed outline-2 outline-offset-8 outline-[#CDCDCD]">
+                  <Image
+                    src="/evaluation.png"
+                    width={80}
+                    height={80}
+                    alt="street light5"
+                  />
+                </div>
+                <div class="text-center mt-6">
+                  <p class="font-semibold">Evaluation</p>
+                  <p class="text-[#626262]">
+                    Gathered insights are used to evaluate the performance of the
+                    lighting systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+   
+</body>
+</html>
