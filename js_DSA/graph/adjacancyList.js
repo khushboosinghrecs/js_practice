@@ -71,6 +71,7 @@ class GraphAdjList{
      bfs(start) {
         const visited = new Set();
         const queue = [start];
+        visited.add(destination);
         while (queue.length > 0) {
             const airport = queue.shift(); // mutates the queue
             const destinations = adjacencyList.get(airport);   
@@ -92,6 +93,90 @@ class GraphAdjList{
             console.log(v + '->', this.adjacencyList[vertex].join(','));
         }
     }
+    function isCyclic(grid) {
+        const rows = grid.length;
+        const cols = grid[0].length;
+        const visited = Array.from({ length: rows }, () => Array(cols).fill(false));
+        const directions = [
+          [-1, 0], // up
+          [1, 0],  // down
+          [0, -1], // left
+          [0, 1],  // right
+        ];
+      
+        const bfs = (row, col) => {
+          let queue = [];
+          visited[row][col] = true;
+          queue.push([row, col, -1, -1]);
+      
+          while (queue.length > 0) {
+            let [currentRow, currentCol, parentRow, parentCol] = queue.shift();
+      
+            for (const [dr, dc] of directions) {
+              const newRow = currentRow + dr;
+              const newCol = currentCol + dc;
+      
+              if (
+                newRow >= 0 && newRow < rows &&
+                newCol >= 0 && newCol < cols &&
+                grid[newRow][newCol] === 0
+              ) {
+                if (!visited[newRow][newCol]) {
+                  visited[newRow][newCol] = true;
+                  queue.push([newRow, newCol, currentRow, currentCol]);
+                } else if (newRow !== parentRow || newCol !== parentCol) {
+                  return true;
+                }
+              }
+            }
+          }
+          return false;
+        };
+      
+        for (let i = 0; i < rows; i++) {
+          for (let j = 0; j < cols; j++) {
+            if (grid[i][j] === 0 && !visited[i][j]) {
+              if (bfs(i, j)) return true;
+            }
+          }
+        }
+      
+        return false;
+      }
+      isCyclic() {
+        let visited = new Array(this.V).fill(false);
+    
+        // Helper function for BFS
+        const bfs = (src) => {
+          let queue = [];
+          visited[src] = true;
+          queue.push([src, -1]);  // node and its parent
+    
+          while (queue.length) {
+            let [node, parent] = queue.shift();
+    
+            for (let neighbor of this.adjList.get(node)) {
+              if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                queue.push([neighbor, node]);
+              } else if (neighbor !== parent) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+    
+        // Check all components of the graph
+        for (let i = 0; i < this.V; i++) {
+          if (!visited[i]) {
+            if (bfs(i)) return true;
+          }
+        }
+        return false;
+      }
+      
+     
 }
 
 // Example Usage
