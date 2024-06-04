@@ -153,7 +153,7 @@ class GraphAdjList{
           queue.push([src, -1]);  // node and its parent
     
           while (queue.length) {
-            let [node, parent] = queue.shift();
+            let [node, parent] = queue.shift(); 
     
             for (let neighbor of this.adjList.get(node)) {
               if (!visited[neighbor]) {
