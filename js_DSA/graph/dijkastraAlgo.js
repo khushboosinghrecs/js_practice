@@ -1,83 +1,82 @@
 class GraphAdjList {
-    constructor(){
+    constructor() {
         this.adjacencyList = new Map();
     }
 
-    addVertex(v){
-        if(!this.adjacencyList.has(v)){
+    addVertex(v) {
+        if (!this.adjacencyList.has(v)) {
             this.adjacencyList.set(v, []); // add vertex to adjacency list
 
         }
 
     }
 
-    addEdge(v1, v2, weight){
-        if(this.adjacencyList.has(v1) && this.adjacencyList.has(v2))
-        {
-            this.adjacencyList.get(v1).push({node: v2, weight: weight});
-            this.adjacencyList.get(v2).push({node: v1, weight: weight});
+    addEdge(v1, v2, weight) {
+        if (this.adjacencyList.has(v1) && this.adjacencyList.has(v2)) {
+            this.adjacencyList.get(v1).push({ node: v2, weight: weight });
+            this.adjacencyList.get(v2).push({ node: v1, weight: weight });
         }
     }
 
-    dijkastra(start){
-        const distance ={};
+    dijkastra(start) {
+        const distance = {};
         const priorityQueue = new MinPriorityQueue();
-        const previous= {}
+        const previous = {}
 
 
-        for(let vertex of this.adjacencyList.keys()){
-        if(vertex === start){
-            distance[vertex] = 0; // set distance to zero
-            priorityQueue.enque(vertex, 0);
-        }
-        else{ // set distance to infinity
-            distance[vertex] = Infinity;
-            priorityQueue.enque(vertex, Infinity);
-        }
-        previous[vertex] = null;
-
+        for (let vertex of this.adjacencyList.keys()) {
+            if (vertex === start) {
+                distance[vertex] = 0; // set distance to zero
+                priorityQueue.enque(vertex, 0);
+            }
+            else { // set distance to infinity
+                distance[vertex] = Infinity;
+                priorityQueue.enque(vertex, Infinity);
+            }
+            previous[vertex] = null;
+        
     }
 
-    while(!priorityQueue.isEmpty()){
-        let {element: smallest} = priorityQueue.dequeue();
+    while(!priorityQueue.isEmpty()) {
+    let { element: smallest } = priorityQueue.dequeue();
 
-        if(distance[smallest] == Infinity) break;
+    if (distance[smallest] == Infinity) break;
 
-        for(let neighbour of this.adjacencyList.get(smallest)){
+    for (let neighbour of this.adjacencyList.get(smallest)) {
         let alt = distance[smallest] + neighbour.weight;
 
-        if(alt < distance[neighbour.node]){
+        if (alt < distance[neighbour.node]) {
             distances[neighbor.node] = alt;
-                    previous[neighbor.node] = smallest;
-                    priorityQueue.enqueue(neighbor.node, alt);
+            previous[neighbor.node] = smallest;
+            priorityQueue.enqueue(neighbor.node, alt);
         }
-        }
-
     }
+
+}
     }
 }
 
-class MinPriorityQueue{
-    constructor(){
+class MinPriorityQueue {
+    constructor() {
         this.value = [];
     }
 
-    enque(element, priority){
-        this.value.push( {element, priority});
+    enque(element, priority) {
+        this.value.push({ element, priority });
         this.sort();
 
     }
-    dequeue(){
+    dequeue() {
         return this.value.shift();
     }
 
-    isEmpty(){
+    isEmpty() {
         return this.value.length === 0;
 
     }
 
-    sort(){
-        this.value.sort((a, b)=> a.priority  - b.priority);
+    sort() {
+        this.value.sort((a, b) => a.priority - b.priority);
     }
 }
 
