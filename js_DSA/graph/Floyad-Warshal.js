@@ -53,6 +53,7 @@ const distances = floydWarshall(graph);
 if (distances) {
   console.log("Shortest distances between every pair of vertices:");
   for (let i = 0; i < distances.length; i++) {
+    console.log(distances[i]);
     console.log(distances[i].join(' '));
   }
 }
