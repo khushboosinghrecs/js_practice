@@ -106,5 +106,4 @@ function prim (graph, start){
     }
 
     return mst;
-
 }
