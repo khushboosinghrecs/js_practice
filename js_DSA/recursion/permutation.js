@@ -3,7 +3,6 @@ var permute = function(nums) {
     
     function fun(nums, l, h ){
         if(l===h){
-    
             // console.log(nums, [...nums], 'khuhsi singh')
             arr.push([...nums]);
             return
